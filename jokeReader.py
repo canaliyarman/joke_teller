@@ -17,10 +17,10 @@ while True:
     if keyboard.read_key() == "j":        
         flag = random.randint(0,5)
         if flag == 0:
-            index = random.randint(0,len(j_ss))
+            index = random.randint(0,len(j_ss)-1)
             while True:
                 if(j_ss[index]["rating"]<3):
-                    index = random.randint(0,len(j_reddit))
+                    index = random.randint(0,len(j_reddit)-1)
                 else:
                     break
             body = j_ss[index]["body"]
@@ -29,10 +29,10 @@ while True:
             if keyboard.is_pressed("esc"):
                 engine.stop()
         else:
-            index = random.randint(0,len(j_reddit))
+            index = random.randint(0,len(j_reddit)-1)
             while True:
                 if(j_reddit[index]["score"]<3):
-                    index = random.randint(0,len(j_reddit))
+                    index = random.randint(0,len(j_reddit)-1)
                 else:
                     break
             title = j_reddit[index]["title"]
